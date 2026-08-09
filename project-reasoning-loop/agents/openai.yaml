@@ -1,0 +1,5 @@
+interface:
+  display_name: "Project Reasoning Loop"
+  short_description: "Run durable global-to-project reasoning loops"
+  default_prompt: "Use $project-reasoning-loop to resume this long-running project from durable evidence without duplicating native Codex task state."
+
