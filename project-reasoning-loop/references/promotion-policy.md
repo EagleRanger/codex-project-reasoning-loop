@@ -30,6 +30,18 @@ Cross-project knowledge is limited to transferable reasoning methods. Keep techn
 5. **Approved global rule** - obtain user approval for the exact rule and destination.
 6. **Review or retirement** - supersede the rule when counterevidence or changed conditions appear.
 
+## Keep knowledge type separate from maturity
+
+Classify what an item is independently from how strongly it is supported:
+
+- a cognitive kernel expresses stable judgment boundaries;
+- a thinking operator is an optional way to explore or compare;
+- a procedure or Skill tells an executor how to act;
+- project truth records the current authoritative state of one project;
+- raw history or evidence remains with its native owner.
+
+Then assign the actual maturity stage above. Do not turn a persuasive seed into a mandatory operator, a project fact into global memory, raw history into a Skill, or an approved procedure into a universal answer. A type change requires a separate admission decision.
+
 ## Quality gates
 
 Require all of the following before marking a candidate `eligible`:
@@ -74,4 +86,3 @@ Distinguish empirical promotion from an explicit user policy decision. The user 
 - adopt it as user policy only within that stated scope;
 - keep any supporting cross-project candidate at its actual evidence stage;
 - do not describe the policy as a universally validated causal law.
-

@@ -52,6 +52,13 @@ PROJECT_LOOP_SECTIONS = {
     "Outbound to global loop",
     "Current phase and next checkpoint",
 }
+TASK_LANE_SECTION = "Task lanes and handoff"
+TASK_LANE_MARKERS = {
+    "Project/strategy lane",
+    "Execution/run lane",
+    "Project-to-execution",
+    "Execution-to-project",
+}
 
 
 def split_entries(text: str) -> list[tuple[str, str, str]]:
@@ -97,7 +104,7 @@ def validate_entry(entry_id: str, title: str, body: str) -> list[str]:
     return errors
 
 
-def validate_project_loop(path: Path) -> list[str]:
+def validate_project_loop(path: Path, require_task_lanes: bool = False) -> list[str]:
     text = path.read_text(encoding="utf-8")
     fields = {key.strip(): value.strip() for key, value in FIELD_RE.findall(text)}
     sections = {
@@ -118,6 +125,12 @@ def validate_project_loop(path: Path) -> list[str]:
         errors.append("PROJECT_LOOP.md: Global loop must be project-reasoning-loop")
     if fields.get("Updated") == "YYYY-MM-DD":
         errors.append("PROJECT_LOOP.md: Updated is still a placeholder")
+    if require_task_lanes and TASK_LANE_SECTION not in sections:
+        errors.append(f"PROJECT_LOOP.md: missing section {TASK_LANE_SECTION}")
+    if TASK_LANE_SECTION in sections:
+        for marker in sorted(TASK_LANE_MARKERS):
+            if marker not in text:
+                errors.append(f"PROJECT_LOOP.md: task-lane section missing marker {marker}")
     return errors
 
 
@@ -129,6 +142,11 @@ def main() -> int:
         action="store_true",
         help="Require and validate PROJECT_LOOP.md",
     )
+    parser.add_argument(
+        "--require-task-lanes",
+        action="store_true",
+        help="Require the project/execution task-lane handoff contract",
+    )
     args = parser.parse_args()
 
     base = Path(args.root).expanduser().resolve() / ".project-reasoning"
@@ -138,8 +156,8 @@ def main() -> int:
 
     project_loop_path = base / "PROJECT_LOOP.md"
     if project_loop_path.exists():
-        errors.extend(validate_project_loop(project_loop_path))
-    elif args.require_project_loop:
+        errors.extend(validate_project_loop(project_loop_path, args.require_task_lanes))
+    elif args.require_project_loop or args.require_task_lanes:
         errors.append(f"missing file: {project_loop_path}")
 
     for path in files:
@@ -168,4 +186,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

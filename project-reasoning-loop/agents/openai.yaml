@@ -1,5 +1,4 @@
 interface:
   display_name: "Project Reasoning Loop"
-  short_description: "Run durable global-to-project reasoning loops"
-  default_prompt: "Use $project-reasoning-loop to resume this long-running project from durable evidence without duplicating native Codex task state."
-
+  short_description: "Crystallize and run durable project loops"
+  default_prompt: "Use $project-reasoning-loop to crystallize this project's reasoning into a durable, evidence-backed execution loop without duplicating native Codex task state."

@@ -63,6 +63,16 @@ def project_loop_template(loop_id: str) -> str:
 - Active workflow or implementation pointer:
 - Current evidence and run records:
 
+## Task lanes and handoff
+
+- Project/strategy lane (`【项目】`) and canonical write ownership:
+- Execution/run lane (`【执行】`) and permitted scope:
+- Cognitive phases and crystallization gate: Explore, Crystallize, and Reflect stay in the project lane; Execute stays in the execution lane. Define the reasoning source, settled decisions, open design space, assumptions to test, and reopen conditions before execution.
+- Project-to-execution packet location or rule:
+- Execution-to-project feedback location or rule:
+- Parallel-safe work and serialized resources:
+- Escalation path for blocked or strategy-changing execution:
+
 ## Inbound from global loop
 
 - Applied or localized methods:
@@ -124,4 +134,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-
