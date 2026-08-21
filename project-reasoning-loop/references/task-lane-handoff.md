@@ -81,4 +81,3 @@ The project lane applies the record admission test, diagnoses causes, and decide
 - Prefer append-only per-run output for concurrent evidence collection and one canonical writer for governance files.
 - Bound concurrency, elapsed time, review rounds, and model cost. Stop repeated or decision-irrelevant work.
 - Serialize GUI, account, and production resources unless concurrency safety is directly proven.
-
