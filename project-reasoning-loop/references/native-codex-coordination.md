@@ -24,12 +24,18 @@ Use this default mapping:
 ```text
 Codex project or shared project folder
 └── one actual project entity and one project-specific loop
-    ├── task/chat for development or a distinct deliverable
-    ├── task/chat for review or investigation
-    └── scheduled/recurring task as an execution lane
+    ├── 【项目】 task/chat: strategy, research, validation, diagnosis, canonical decisions
+    ├── 【执行】 task/chat: scheduled or concrete production run and feedback
+    └── optional bounded sub-agents: independent evidence or disjoint work only
 ```
 
 Create separate project loops only when objectives, authorities, production workflows, risk boundaries, or recovery states are materially independent. A separate sidebar title alone is not enough.
+
+Task labels describe responsibility, not authority. `【项目】` is the project-loop steward and canonical writer. `【执行】` follows one approved handoff and returns evidence; it cannot silently change the active workflow or project strategy. Both labels reuse the same project loop and native Codex remains authoritative for each task's live state.
+
+When a task mixes strategy testing and real execution, stop before side effects and split it at the handoff boundary. Keep candidate testing isolated, then issue a compact project-to-execution packet. Return a compact execution-to-project packet after the run. See `task-lane-handoff.md`.
+
+Native multi-agent work is most useful for independent questions, disjoint write scopes, and separate verification. Do not parallelize shared GUI state, external accounts, the same production entrypoint, or overlapping files. Parent-mediated synthesis and append-only run outputs are safer than assuming peer agents share current state.
 
 For a broad craft area such as presentations, distinguish the reusable production method from a concrete deliverable. Keep shared craft guidance in the applicable Skill or project instructions; keep deliverable-specific decisions and evidence with the actual project. Do not build another umbrella loop that repeats both.
 
