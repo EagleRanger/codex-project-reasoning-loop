@@ -107,4 +107,3 @@ Keep project technology, commands, paths, handles, versions, hashes, and transie
 - removes project-specific nouns;
 - states applicability, counterexample, and invalidation signal;
 - remains a proposal until the global maintenance task reviews it.
-
