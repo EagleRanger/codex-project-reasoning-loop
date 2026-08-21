@@ -220,4 +220,3 @@ Evidence that should cause review or retirement.
 - Keep `PROJECT_LOOP.md` as the canonical contract. Optional machine-readable indexes must point back to it and be checked for consistency rather than becoming an independent source of truth.
 - Keep exploratory dialogue with its native task. When an idea must survive across sessions, store only a source pointer and the minimum decision-relevant definition, scope, counterexample, unresolved question, and maturity; do not create a second conversation archive.
 - When automated model review is enabled, keep its review key and unresolved findings in a compact project-local receipt or state file; do not require the reviewer to reconstruct them from full chat history.
-
