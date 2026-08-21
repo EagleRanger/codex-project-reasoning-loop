@@ -86,4 +86,3 @@ Distinguish empirical promotion from an explicit user policy decision. The user 
 - adopt it as user policy only within that stated scope;
 - keep any supporting cross-project candidate at its actual evidence stage;
 - do not describe the policy as a universally validated causal law.
-
