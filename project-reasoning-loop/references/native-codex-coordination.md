@@ -66,4 +66,3 @@ To reduce Auto-review volume safely:
 - require explicit user authorization before changing permissions or review policy.
 
 Reducing quality-review rounds does not reduce Auto-review traffic unless it also removes unnecessary boundary-crossing actions. Measure the two systems separately.
-
