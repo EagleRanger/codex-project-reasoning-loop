@@ -61,4 +61,3 @@ Separate four boundaries:
 Where evidence arrives asynchronously, wait only through a bounded read-only settlement window. A valid no-action or negative result records the evaluated scope, decisive gate, proof of non-mutation, and next legal condition.
 
 After reflection, choose one action: reject transient narration, link to the native authority, update project truth, record a validated lesson, or propose a cross-project candidate. Never promote directly from an attractive idea or a single unresolved event.
-
