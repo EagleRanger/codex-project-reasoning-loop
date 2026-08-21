@@ -63,4 +63,3 @@ python <skill-dir>/scripts/validate_component_registry.py --root <project-root>
 ```
 
 The validator checks structure, IDs, dependencies, cycles, production composition, local evidence pointers, and protected artifact fingerprints. Project-specific runtime gates may add stricter checks but should reference the same registry instead of creating another component ledger.
-
