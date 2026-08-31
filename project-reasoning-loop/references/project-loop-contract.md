@@ -18,8 +18,24 @@ Define:
 10. project-to-execution and execution-to-project handoff boundaries, including canonical write ownership;
 11. content that must remain project-local.
 12. the cognitive phase model and crystallization gate used when open-ended reasoning becomes execution.
+13. independent claim dimensions for structural validity, observed effect, and user acceptance when applicable.
+14. project-local admission and redaction before any lesson becomes an outbound cross-project candidate.
 
 The project loop performs the actual project iteration and owns project facts. The global loop owns only reusable cross-project reasoning methods. Project feedback moves upward only as abstract candidates. Do not let either layer impersonate the other.
+
+## Global-project improvement cycle
+
+Use this loop:
+
+```text
+reviewed global method
+-> project localization and bounded execution
+-> project-local evidence, diagnosis, decision, and validated lesson
+-> redacted cross-project candidate
+-> global comparison, review, approval, and versioned method update
+```
+
+The downward path carries methods and questions. The upward path carries only admitted reasoning candidates, never raw project state or execution authority.
 
 Native Codex project and task management owns container membership, transcripts, live task state, approvals, and tool activity. Reference those facts instead of copying them into the loop.
 
@@ -66,6 +82,8 @@ Local validation and model review are complementary:
 - targeted model review examines the remaining semantic delta and decision risk;
 - real-world acceptance proves the requested external or user-visible outcome.
 
+
+Record structural validity, observed effect, and user acceptance as separate conclusions whenever they apply. Do not use a structural validator, tool exit, or completed process to claim a real effect or accepted outcome that it did not observe.
 A passing local gate never proves more than its stated coverage. A model review should not re-read passing evidence unless it challenges the conclusion. Deep review is mandatory when the project's escalation triggers fire, even if local checks pass.
 
 Tool termination, cause settlement, external effect, and final acceptance are distinct boundaries. When an external system writes late evidence, use a bounded read-only settlement check before classification. A justified no-action or negative result is acceptable when its scope, decisive gate, non-mutation evidence, and next legal condition are explicit.
@@ -107,3 +125,5 @@ Keep project technology, commands, paths, handles, versions, hashes, and transie
 - removes project-specific nouns;
 - states applicability, counterexample, and invalidation signal;
 - remains a proposal until the global maintenance task reviews it.
+- has passed project-local record admission and lesson validation before global review;
+- carries only the minimum redacted evidence needed to evaluate the reasoning claim.

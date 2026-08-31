@@ -65,6 +65,9 @@ Return:
 **Observed facts:** direct observations only
 **Evidence:** compact pointers, hashes, checks, screenshots, or external-state references
 **Evidence settled:** yes | no, plus any pending asynchronous source
+**Structural validity:** passed | failed | not_applicable, with evidence limit
+**Observed effect:** passed | failed | unverified | not_applicable
+**User acceptance:** accepted | rejected | pending | not_applicable
 **Deviations:** difference from the packet or `None`
 **Containment and cleanup:** completed actions and remaining exposure
 **Unresolved questions:** facts the execution lane could not establish
@@ -72,6 +75,8 @@ Return:
 ```
 
 The project lane applies the record admission test, diagnoses causes, and decides whether to repair, validate a new candidate, change strategy, or leave the result as a transient run event.
+
+Execution output may nominate a follow-up, but only the project lane may admit it as a project lesson or create a redacted cross-project candidate. The global maintenance task receives candidates, never raw execution packets.
 
 ## Multi-agent rules
 

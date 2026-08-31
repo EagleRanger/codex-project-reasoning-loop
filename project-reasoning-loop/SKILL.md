@@ -28,6 +28,18 @@ For substantial Standard or Full work, identify or establish a stable named proj
 
 Skip a dedicated project loop for one-step, low-risk work with no meaningful resume or recovery need.
 
+## Run the bidirectional improvement cycle
+
+Use the two levels as a controlled improvement loop, not a one-way template hierarchy:
+
+1. The global Loop supplies reviewed cross-project methods and admission questions.
+2. A project-specific Loop localizes only the methods that fit its objective, risks, authorities, and evidence.
+3. The project runs, validates, recovers, and records project-local decisions and lessons without changing the global Skill.
+4. A validated project lesson may be abstracted into a redacted cross-project candidate.
+5. The global maintenance task compares independent contexts, reviews boundaries and counterexamples, obtains any required approval, and only then updates the global method.
+
+The global Loop never pulls raw project state upward, and an execution task never promotes its own finding directly. Every upward change passes project-local admission first, then global review.
+
 ## Coordinate with native Codex project and task management
 
 Map the native structure before creating project-loop artifacts:
@@ -45,6 +57,8 @@ Read [references/native-codex-coordination.md](references/native-codex-coordinat
 ## Separate project and execution task lanes
 
 Use task lanes as role boundaries inside one actual project's loop, not as new projects or new sources of truth. A title label is a routing hint; current user intent, the project contract, and direct evidence remain authoritative.
+
+For long-running or very large projects, use this as the default internal management split. The project lane keeps strategy and durable truth; the execution lane consumes a compact handoff for one approved run. Keep their default context bundles separate so execution detail does not flood project strategy and stale strategy history does not anchor routine runs.
 
 - **Project/strategy lane (`【项目】`)**: research project-wide rules, test ideas in isolated `validation_only` mode, diagnose execution feedback, choose strategy, approve workflow replacement, and maintain canonical project state, decisions, lessons, and candidate feedback.
 - **Execution/run lane (`【执行】`)**: perform a bounded scheduled or concrete production run against one active approved workflow, preserve current authority and stop conditions, collect direct evidence, contain failure, finalize the run result, and return structured feedback.
@@ -118,6 +132,8 @@ Archive only after a replacement recovery path passes. Physical deletion is a se
 
 Read [references/context-lifecycle.md](references/context-lifecycle.md) before materially compacting project state, splitting a long-running task, archiving a source task, or proposing deletion. If a project declares a context-bundle config, use `scripts/audit_context_lifecycle.py` for a read-only structural audit; its pass result does not replace the semantic recovery test.
 
+Invalidate a prior compaction or recovery receipt when the objective, authority chain, active workflow, permissions, accepted baseline, or acceptance semantics materially change. Re-run the full recovery gate for a broad semantic change; use a focused next-checkpoint confirmation only when the affected relationship is narrow and explicit.
+
 ## Run the record admission test
 
 Run this test before creating or materially updating any durable project record. Decide the resulting action; do not create a separate admission log unless the decision itself changes future work.
@@ -131,6 +147,21 @@ Run this test before creating or materially updating any durable project record.
 
 Choose one result: **reject**, **link to authority**, **merge or update**, or **record**. A scheduled review must not manufacture lessons from repository scanning, treat the absence of recent failures as proof of improvement, or promote a candidate without the normal evidence and approval guardrails.
 
+
+## Separate conclusion dimensions
+
+Do not collapse different kinds of evidence into one overall `PASS`.
+
+- **Structural validity**: files, schemas, identities, links, and declared relationships are internally consistent.
+- **Observed effect**: the requested behavior or external state change was directly observed.
+- **User acceptance**: the user reviewed and accepted the relevant outcome when acceptance is part of the contract.
+
+Report each applicable dimension independently. A structural pass does not imply real effect, and an observed effect does not imply user acceptance.
+
+## Resolve mutable authority at validation time
+
+Resolve current authority, workflow, target, and dependency pointers from their authoritative owner when the check runs. Do not hard-code a value that is expected to change.
+Use a historical identifier only as an explicitly frozen fixture with a stated purpose. A current-pointer test and a frozen-fixture test are different claims and must not impersonate each other.
 ## Ingest referenced tasks and conversations first
 
 When the user points to another Codex task, project, or conversation as the source of intent:
@@ -307,6 +338,7 @@ Global promotion is a proposal-and-review operation, not an automatic threshold 
 - Show the exact proposed rule and destination to the user before writing outside the project.
 - Keep rejected and superseded candidates reviewable.
 
+- Remove concrete project names, local paths, task IDs, account data, private URLs, raw logs, unique hashes, and implementation incidents before a project candidate leaves its project boundary.
 An explicit user instruction may set a global operating policy without pretending that the policy is an empirically proven cross-project lesson. Record its source, scope, boundary, and reversal condition as a decision. Continue to label the supporting project candidate by its actual evidence stage.
 
 ## Keep the system lean

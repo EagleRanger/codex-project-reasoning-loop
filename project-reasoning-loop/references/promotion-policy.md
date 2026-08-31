@@ -2,6 +2,14 @@
 
 Cross-project knowledge is limited to transferable reasoning methods. Keep technical facts and implementation constraints inside their projects.
 
+## Candidate ingress
+
+Execution feedback cannot update the global method directly.
+
+- The execution lane returns observations and evidence to its project-specific Loop.
+- The project lane applies record admission, verifies causality, and decides whether a project lesson is validated.
+- Only then may the project create a redacted cross-project candidate for a separate global maintenance review.
+
 ## Eligible categories
 
 - problem framing and acceptance criteria;
@@ -20,6 +28,8 @@ Cross-project knowledge is limited to transferable reasoning methods. Keep techn
 - transient service failures or permission restrictions;
 - conclusions supported only by repeated observations from the same unresolved root cause;
 - absolute rules with no stated boundary or counterexample.
+- raw project state, full transcripts, logs, screenshots, private URLs, account data, or unique runtime identifiers;
+- concrete project names, local paths, task IDs, hashes, and implementation incidents that are unnecessary to evaluate the reasoning claim.
 
 ## Promotion stages
 
@@ -55,6 +65,8 @@ Require all of the following before marking a candidate `eligible`:
 - the rule changes a future decision or check, rather than merely describing the past;
 - no higher-priority safety or user instruction conflicts with it.
 
+- the originating project performed project-local admission before proposing the candidate;
+- the candidate carries only the minimum de-identified evidence required for global review.
 ## Preferred rule form
 
 Prefer a conditional procedure:

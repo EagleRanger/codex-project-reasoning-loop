@@ -43,6 +43,30 @@ Global project-reasoning-loop Skill
 
 The central rule is **one fact, one owner**. Native Codex remains the source of truth for live task execution. The project loop stores only durable project semantics that must survive across task chats.
 
+## Bidirectional improvement cycle
+
+The architecture is a closed improvement loop rather than a one-way hierarchy:
+
+```text
+Global reusable methods
+  -> Project/strategy lane localizes them for one actual project
+  -> Execution/run lane performs one bounded approved workflow
+  -> Project lane admits or rejects the returned evidence
+  -> Redacted candidate carries only reusable causality and boundaries
+  -> Global review may update the reusable method
+```
+
+1. The global Loop supplies reusable framing, validation, recovery, and promotion methods.
+2. Each concrete project's Project/strategy lane owns its durable truth and adapts those methods to local authorities, risks, and acceptance criteria.
+3. Its Execution/run lane receives a compact contract for one run and returns facts, evidence, deviations, cleanup, and unresolved questions.
+4. The project lane decides whether the return changes project state, becomes a local lesson, or is rejected.
+5. Only de-identified, evidence-backed, independently applicable lessons may become cross-project candidates.
+6. The global Loop reviews those candidates; raw project state and private implementation details never move upward.
+
+This internal Project + Execution split applies inside each concrete project. The two lanes share one project-loop ID but keep different responsibilities and default context bundles.
+
+For very long-running projects with huge histories, resume from compact hot truth, retrieve warm decisions and evidence only when relevant, and preserve cold raw history for audit instead of loading the entire past into every task.
+
 ## Core ideas
 
 1. **One actual project, one project loop.** Development, review, investigation, and scheduled runs reuse the same loop when they share an objective, authority chain, production workflow, and recovery state.
@@ -61,6 +85,10 @@ The central rule is **one fact, one owner**. Native Codex remains the source of 
 14. **Converge with a baseline pass and an exception pass.** Freeze items that pass, repair only the observed failure subset once, and reopen the baseline only when failures are systemic.
 15. **Keep context hot, warm, and cold.** Resume from a minimal current-truth bundle, retrieve decisions and evidence by relevance, and preserve raw history for audit without loading it by default.
 16. **Prove recovery before archive or deletion.** Compact recall-first and precision-second, preserve the prior state and hash, then pass an eight-question hot-only recovery gate. Structural success is not semantic recovery.
+17. **Invalidate stale recovery receipts.** Material changes to objective, authority, workflow, permissions, dependencies, or acceptance semantics require focused or full semantic recovery retesting before old receipts can be trusted.
+18. **Separate claim dimensions.** Structural validity, directly observed real effect, and user acceptance are independent claims with independent evidence.
+19. **Resolve mutable authority at validation time.** A pointer to a current owner must resolve against that owner's current declaration; historical identifiers may be used only as explicitly frozen fixtures.
+20. **Admit feedback before promotion.** Execution returns first enter project-local review. Only admitted, de-identified candidates may enter cross-project review.
 
 ## Repository layout
 
@@ -208,6 +236,7 @@ An unchanged review key with no open finding should not trigger another quality-
 - Historical approval does not authorize a new real-world run.
 - Local checks do not prove an external or user-visible result unless their coverage actually observes it.
 - Project records must not copy secrets, full transcripts, personal data, or unnecessary raw logs.
+- Public packages omit concrete project names, local paths, task IDs, account data, private URLs, raw logs, unique hashes, and internal implementation incidents.
 - Repository scanning or the absence of recent failures cannot by itself create a validated lesson.
 - Cross-project candidates never promote themselves into global rules.
 - The full loop is intentionally skipped for trivial one-step tasks.
@@ -221,6 +250,11 @@ An unchanged review key with no open finding should not trigger another quality-
 - Codex 原生任务负责对话、实时状态、审批和工具活动；项目循环不重复保存这些内容。
 - 总 Loop 只管理跨项目方法，不保存或推进任何具体项目的实际状态。
 - 下位项目 Loop 负责实际项目迭代优化、验证、恢复和反馈提炼，并保存长期目标、权威链、当前阶段、活动工作流、禁止路线与验收证据。
+- 总项目方法与具体项目不是单向下发：下位项目把经过验证、去标识化且具有独立适用性的经验作为候选返回，总 Loop 再审查是否升级通用方法。
+- 每个具体项目内部继续分为“项目+执行”两层：项目通道掌握策略和长期真值，执行通道只完成一次获批运行并回传事实与证据。
+- 这种双层分工专门面向长期运行、超大项目和超长上下文：项目端维持热层真值，执行端只接收本次所需的精简交接包，避免运行细节淹没战略上下文。
+- 目标、权威、活动工作流、权限、依赖或验收语义发生实质变化后，旧压缩回执与恢复证明自动失效，必须重新做语义恢复测试。
+- 结构正确、真实效果和用户验收是三种独立结论，任何一种通过都不能代替另外两种。
 - 已独立验收的能力应登记为稳定组件并冻结，通过配方组合复用；改变行为时建立新ID/版本并独立验收，禁止静默改写旧组件或为同一能力另造平行入口。
 - 开放式探索先在项目通道形成认知，再经过结晶门转成精简执行契约；执行端不重放整段历史，也不把旧答案当默认结论。
 - 拒绝性门禁必须位于第一笔持久写入或真实副作用之前；有证据的无动作与零变更负结果也是正式终态。

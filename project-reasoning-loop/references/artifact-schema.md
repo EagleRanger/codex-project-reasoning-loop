@@ -50,9 +50,13 @@ Use this as the canonical project-specific loop contract for substantial multi-s
 - Local validation gates and their evidence limits.
 - Quality-review triggers, scope budget, review-policy version, review receipt, invalidation, and stop conditions.
 - Current side-effect authority, irreversible-action containment, unknown-run reconciliation, rollback, and run-manifest policy.
+- Structural-validity, observed-effect, and user-acceptance conclusions, each with its own evidence limit.
+- Mutable authority and workflow pointers plus the conditions that invalidate prior validation or recovery receipts.
 
 ## Outbound to global loop
 - Candidate queue and prohibited project-specific content.
+- Project-local admission owner and maturity required before an outbound candidate may be proposed.
+- Redaction boundary for project names, paths, task IDs, accounts, private URLs, logs, hashes, and implementation incidents.
 
 ## Current phase and next checkpoint
 - Current phase, smallest falsifiable next action, and pass/fail signal.
@@ -107,6 +111,7 @@ Use `.project-reasoning/runs/<run-id>.md` only when the run has external effects
 - Direct evidence contract, deadline or budget, containment, and rollback.
 
 ## Result and feedback
+- Separate structural-validity, observed-effect, and user-acceptance conclusions; use `not_applicable` or `unverified` instead of inferring a pass.
 - Outcome type, observed facts, evidence pointers, evidence-settlement state, mutation or non-mutation evidence, deviations, cleanup, unresolved questions, and optional proposed follow-up.
 ```
 

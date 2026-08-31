@@ -57,6 +57,20 @@ For a material change in recovery semantics, create a receipt such as `.project-
 - new hot files and hashes;
 - recovery-test result, time, and rollback location.
 
+## Invalidate stale recovery receipts
+
+A receipt proves recovery only for the semantics it tested.
+
+Invalidate it when:
+
+- the current objective or project boundary materially changes;
+- an authority owner or pointer changes;
+- the active workflow, accepted baseline, or dependency composition changes;
+- permissions or side-effect boundaries change;
+- the meaning of acceptance or the next pass/fail checkpoint changes.
+
+Use the full eight-question gate after a broad semantic change. When only one narrow relationship changed, a focused next-checkpoint confirmation may be sufficient if the unaffected relationships and the reason for limited scope are explicit.
+
 ## Run the eight-question recovery gate
 
 Give the evaluator only the proposed hot context and require correct answers to:

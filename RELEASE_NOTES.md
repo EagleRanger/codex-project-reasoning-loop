@@ -1,5 +1,17 @@
 # Release notes
 
+## v1.2.0 - 2026-08-31
+
+- Makes the two-level architecture explicitly bidirectional: global methods are localized by each project, and validated project lessons return only as redacted candidates for global review.
+- Makes the internal Project/strategy and Execution/run split explicit for each concrete project: both lanes share one project Loop, while execution remains bounded and returns evidence to the project lane.
+- Optimizes long-running, very large projects and long context histories through hot/warm/cold context layers, lane-specific compact recovery packets, semantic recovery gates, and receipt invalidation after material change.
+- Separates structural validity, observed real effect, and user acceptance into independent claim dimensions; one passing dimension no longer implies the others.
+- Requires mutable authority and workflow pointers to resolve against their current owner at validation time; historical identifiers remain frozen fixtures only when declared as such.
+- Invalidates recovery and compaction receipts when objective, authority, active workflow, permissions, or acceptance semantics materially change.
+- Requires execution feedback to pass through project-local admission before it can become a project lesson or cross-project candidate.
+- Strengthens the public privacy boundary: concrete project names, paths, task IDs, account data, private URLs, logs, hashes, and implementation incidents remain outside the reusable Skill.
+- Updates the project contract, artifact schemas, promotion policy, handoffs, context lifecycle, and public documentation to reflect the current total-to-project-to-total improvement cycle.
+
 ## v1.1.0 - 2026-08-22
 
 - Adds an Explore-Crystallize-Execute-Reflect cycle without creating a second task or conversation store.
