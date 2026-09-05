@@ -89,6 +89,9 @@ For very long-running projects with huge histories, resume from compact hot trut
 18. **Separate claim dimensions.** Structural validity, directly observed real effect, and user acceptance are independent claims with independent evidence.
 19. **Resolve mutable authority at validation time.** A pointer to a current owner must resolve against that owner's current declaration; historical identifiers may be used only as explicitly frozen fixtures.
 20. **Admit feedback before promotion.** Execution returns first enter project-local review. Only admitted, de-identified candidates may enter cross-project review.
+21. **Find the main contradiction before adding controls.** Identify the relationship that most enables or suppresses the desired possibility, preserve what already works, and rewrite the blocking mechanism first.
+22. **Keep the active outcome through steering messages.** Questions, corrections, compatible additions, and local pauses do not automatically cancel the unfinished authorized task.
+23. **Prefer current applicable experience.** Retrieve by goal, object, failure class, scope, and invalidation; verify old source material through the latest correction before acting.
 
 ## Repository layout
 
@@ -106,6 +109,7 @@ project-reasoning-loop/
     promotion-policy.md
     task-lane-handoff.md
     validation-review-policy.md
+    continuity-and-learning.md
   scripts/
     init_project.py
     validate_records.py
@@ -265,6 +269,9 @@ An unchanged review key with no open finding should not trigger another quality-
 - 项目技术经验先留在项目内；只有经过因果验证和独立场景比较的推理方法，才可提交为跨项目候选。
 - 先做本地确定性验证，再把实质变化和未解决风险交给模型审查。
 - 任何公开发布、删除、部署或真实外部操作仍需当前明确授权。
+- 复杂问题先找决定新可能能否成立的主矛盾：保留已有有效部分，优先改写阻塞关系，再用正负反馈修正判断。
+- 插话、追问、批注和局部暂停不自动取消未完成目标；回答或吸收修正后，应从最近有效检查点继续。
+- 当前权威与最新纠正优先，旧经验按目标和失效条件召回；交接时核对原始相关片段直至最新修正。
 
 ## Contributors and attribution
 

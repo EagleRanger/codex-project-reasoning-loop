@@ -29,6 +29,8 @@ Keep native task transcripts, raw logs, old state, screenshots, and historical a
 ## Decide whether to continue or split a task
 
 - Continue the same task while one explicit outcome remains active. A user correction inside that outcome does not require a second writing chain.
+- Treat a question, status request, compatible addition, or local pause as steering inside that outcome. Answer or apply it, preserve accepted results, and resume the remaining authorized work.
+- Replace or stop the outcome only when the user explicitly cancels it, supplies an incompatible replacement, pauses the whole task, or a real unresolved authority or choice boundary requires handback.
 - Start another task when the outcome, deliverable, or fact owner is materially independent. Pass a crystallized recovery packet instead of copying the old transcript.
 - Project/strategy and execution/run tasks may be separate work surfaces, but they share one project loop and one active authority chain.
 - Keep one writer for any shared file, GUI, external account, production entrypoint, or canonical project record.
@@ -37,7 +39,7 @@ Keep native task transcripts, raw logs, old state, screenshots, and historical a
 
 ### Pass 1: recall first
 
-Extract the current objective, latest user corrections, settled decisions, authorities, accepted baseline, open work, blocked routes, risks, permission boundaries, evidence pointers, and next checkpoint. Temporary duplication is safer than prematurely deleting a correction.
+Extract the current objective, latest user corrections, settled decisions, authorities, accepted baseline, completed results that must be preserved, unfinished work, blocked routes, risks, permission boundaries, evidence pointers, and next checkpoint. Temporary duplication is safer than prematurely deleting a correction.
 
 ### Pass 2: precision second
 

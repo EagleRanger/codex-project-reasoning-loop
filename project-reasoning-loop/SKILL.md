@@ -1,6 +1,6 @@
 ---
 name: project-reasoning-loop
-description: Establish and run durable global-to-project reasoning loops for long-running or multi-session work without duplicating native Codex project, chat, task-status, or approval state. Use when Codex needs to create or resume one named loop per actual project entity, translate long-form exploration into a bounded execution contract, separate project/strategy tasks from execution/run tasks, coordinate bounded multi-agent handoffs, govern hot/warm/cold context and recoverable compaction, read referenced task context, protect a verified workflow from stale routes, use local evidence before token-expensive quality review, preserve recoverable run state, prevent recurrence of validated mistakes, or return evidence-backed reasoning candidates for cross-project review. Do not use the full loop for trivial one-step requests.
+description: Establish and run durable global-to-project reasoning loops for long-running or multi-session work without duplicating native Codex project, chat, task-status, or approval state. Use when Codex needs to create or resume one named loop per actual project entity, find the main contradiction, translate exploration into a bounded execution contract, separate project/strategy tasks from execution/run tasks, preserve an unfinished goal across corrections and interruptions, retrieve current applicable experience, coordinate bounded multi-agent handoffs, govern hot/warm/cold context and recoverable compaction, protect a verified workflow from stale routes, use local evidence before token-expensive quality review, preserve recoverable run state, prevent recurrence of validated mistakes, or return evidence-backed reasoning candidates for cross-project review. Do not use the full loop for trivial one-step requests.
 ---
 
 # Project Reasoning Loop
@@ -16,6 +16,20 @@ Choose the lightest mode that controls the actual risk.
 - **Full**: architecture change, destructive or external side effect, high uncertainty, milestone review, or work spanning multiple systems. Add explicit assumptions, impact analysis, rollback, decision record, and post-task review.
 
 State the selected mode in one sentence. Do not turn small work into ceremony.
+
+## Start from the main contradiction
+
+For complex work, identify the relationship that most strongly decides whether the desired new possibility can survive. Do not reduce this to a fixed checklist.
+
+1. Name the desired new possibility or capability.
+2. Identify the people, rules, interfaces, resources, habits, or stale assumptions that enable or suppress it.
+3. Find the smallest relationship whose change would materially alter the outcome.
+4. Preserve the parts already producing value; rewrite only the blocking mechanism first.
+5. Test the direct effect and use both positive and negative feedback to revise the explanation.
+
+A useful summary states the main contradiction, the effective adjustment, the direct observed effect, and the unresolved uncertainty. It does not claim a universal law from one successful case.
+
+Use an experience cycle through the project's existing authorities: **explore -> test -> admit -> retrieve -> reuse -> revise**. Retrieve prior successes, counterexamples, and failed routes by the current goal and failure class. Keep them as evidence pointers with scope and invalidation conditions, not as a second memory database. Read [references/continuity-and-learning.md](references/continuity-and-learning.md) when continuity, corrections, or local experience are central to the task.
 
 ## Use a two-level loop architecture
 
@@ -51,6 +65,8 @@ Map the native structure before creating project-loop artifacts:
 Do not create a new loop merely because the sidebar contains another task. Reuse one loop when several tasks share the same project root, objective, authorities, and production workflow. Treat scheduled or recurring execution tasks as run lanes of the owning project, not independent project loops.
 
 Native Codex state is authoritative for task transcript, live status, current approvals, tool results, and task identity. The project loop is authoritative for project objective, authority map, phase, active workflow, blocked routes, acceptance evidence, recovery state, durable decisions, validated lessons, and global candidates. Link native task IDs or evidence locations; do not paste full transcripts, commentary streams, or duplicate progress logs into project records.
+
+Treat a new message as steering, not automatic cancellation. A question may be answered and the active outcome then resumed; a correction replaces only the affected assumption or step; a local pause stops only its named branch. Drop the prior objective only when the user cancels it, replaces it with an incompatible objective, pauses the whole task, or a real authority/choice/dependency boundary requires return to the user. A tool result, partial deliverable, status report, or finished phase is not task completion while authorized work and a safe next step remain.
 
 Read [references/native-codex-coordination.md](references/native-codex-coordination.md) before reorganizing several Codex tasks, creating loops for an existing project collection, or tuning Auto-review volume.
 
@@ -97,6 +113,7 @@ Treat native tasks and sub-agents as isolated work surfaces, not additional auth
 - Do not assume peer agents share a reliable message bus or current state. Use parent-mediated handoff or project-owned append-only run artifacts with explicit ownership.
 - Set a concurrency and review budget. Prefer one local batch operation over many agents when it is cheaper and equally decisive; stop fan-out when results repeat, conflict without new evidence, or no longer change the decision.
 - Never use multi-agent fan-out merely because the capability exists. Respect the host's current delegation policy and the user's authority.
+- Model or agent selection never changes permissions, evidence standards, or completion criteria. Follow the host project's current routing policy, give workers compact evidence-bearing packets, reuse the original worker for bounded repair when context continuity matters, and add independent review only for a named risk.
 
 ## Initialize project artifacts
 
@@ -162,6 +179,7 @@ Report each applicable dimension independently. A structural pass does not imply
 
 Resolve current authority, workflow, target, and dependency pointers from their authoritative owner when the check runs. Do not hard-code a value that is expected to change.
 Use a historical identifier only as an explicitly frozen fixture with a stated purpose. A current-pointer test and a frozen-fixture test are different claims and must not impersonate each other.
+
 ## Ingest referenced tasks and conversations first
 
 When the user points to another Codex task, project, or conversation as the source of intent:
@@ -171,6 +189,8 @@ When the user points to another Codex task, project, or conversation as the sour
 3. Treat the conversation as evidence of user intent, corrections, and historical reasoning; treat current project artifacts and direct observations as evidence of present state.
 4. Resolve conflict by current user instruction, explicit project objective or contract, current direct evidence, active project authorities, then older chat or logs.
 5. State what could not be accessed instead of silently reconstructing missing context.
+
+Default to the latest applicable correction and current authority. Load older error paths only when they explain a present contradiction, constrain a safe action, or provide a needed counterexample. A handoff that may change execution should point to the relevant original span and require the receiver to verify through the latest correction instead of trusting a title or compressed preview.
 
 ## Pre-task loop
 

@@ -1,5 +1,14 @@
 # Release notes
 
+## v1.3.0 - 2026-09-06
+
+- Adds a generative main-contradiction method: identify the relation that most enables or suppresses the desired possibility, preserve effective parts, rewrite the blocking mechanism, and revise from positive and negative feedback.
+- Connects exploration, testing, evidence admission, retrieval, reuse, and revision through existing project authorities instead of creating another memory database.
+- Makes task continuation explicit: questions, corrections, compatible additions, and local pauses steer an active outcome rather than silently cancelling it; phases and partial outputs are not completion.
+- Gives current authority and the latest applicable correction priority while retaining older failures and counterexamples as relevance-triggered evidence.
+- Clarifies bounded model and agent routing: host policy chooses the worker, while permissions, acceptance evidence, and completion criteria remain unchanged.
+- Adds `continuity-and-learning.md` and updates context compaction, task handoffs, contracts, agent metadata, and public documentation.
+
 ## v1.2.0 - 2026-08-31
 
 - Makes the two-level architecture explicitly bidirectional: global methods are localized by each project, and validated project lessons return only as redacted candidates for global review.

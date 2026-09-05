@@ -1,4 +1,4 @@
 interface:
   display_name: "Project Reasoning Loop"
-  short_description: "Crystallize and run durable project loops"
-  default_prompt: "Use $project-reasoning-loop to establish a durable global-to-project-to-global improvement loop, split a concrete project into project/strategy and execution/run lanes when warranted, optimize long-context recovery, and preserve native Codex live state as authoritative."
+  short_description: "Keep long projects current, recoverable, and moving"
+  default_prompt: "Use $project-reasoning-loop to identify the main contradiction, establish a durable global-to-project-to-global improvement loop, split a concrete project into project/strategy and execution/run lanes when warranted, preserve unfinished goals across corrections, retrieve current applicable experience, optimize long-context recovery, and keep native Codex live state authoritative."

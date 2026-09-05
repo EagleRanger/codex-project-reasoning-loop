@@ -20,6 +20,7 @@ Define:
 12. the cognitive phase model and crystallization gate used when open-ended reasoning becomes execution.
 13. independent claim dimensions for structural validity, observed effect, and user acceptance when applicable.
 14. project-local admission and redaction before any lesson becomes an outbound cross-project candidate.
+15. continuation rules for questions, corrections, additions, local pauses, and whole-task replacement.
 
 The project loop performs the actual project iteration and owns project facts. The global loop owns only reusable cross-project reasoning methods. Project feedback moves upward only as abstract candidates. Do not let either layer impersonate the other.
 
@@ -113,6 +114,8 @@ current explicit user instruction
 -> validated lessons
 -> older conversations, logs, comments, and inactive scripts
 ```
+
+Use the latest applicable correction within the active objective. Older conclusions remain retrievable evidence, but they do not regain authority merely because they are more detailed.
 
 Lower layers may explain or challenge higher layers with evidence, but they do not silently overwrite them.
 

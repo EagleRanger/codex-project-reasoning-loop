@@ -86,3 +86,11 @@ Execution output may nominate a follow-up, but only the project lane may admit i
 - Prefer append-only per-run output for concurrent evidence collection and one canonical writer for governance files.
 - Bound concurrency, elapsed time, review rounds, and model cost. Stop repeated or decision-irrelevant work.
 - Serialize GUI, account, and production resources unless concurrency safety is directly proven.
+- Follow the host project's current model-routing policy. A model change never expands authority or lowers acceptance. Prefer a compact evidence packet, reuse the original worker for bounded repair when it retains decisive context, and request independent review only for a named risk.
+
+## Message continuity
+
+- Deliver authority changes, corrections, and execution blockers promptly.
+- Delay non-urgent summaries when immediate delivery would interrupt a monitored external action.
+- On receipt, classify the message as a question, correction, addition, local pause, or whole-task replacement. Do not treat every new message as cancellation.
+- Before handing off an old task, point to the original relevant span through the latest correction; do not rely on the task title or a stale summary.
