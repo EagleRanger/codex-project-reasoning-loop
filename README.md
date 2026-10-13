@@ -1,8 +1,8 @@
-# Codex Project Reasoning Loop
-
-A public Codex Skill for durable, evidence-driven iteration across long-running projects and multiple task chats.
+# Codex 长期项目管理与推理循环
 
 这是一个面向 Codex 长周期项目的公开 Skill。它把“跨项目通用推理方法”和“单个项目的可执行事实”分成两层，同时复用 Codex 原生项目、任务、审批和自动化状态，避免建立第二套重复任务系统。
+
+A public Codex Skill for durable, evidence-driven iteration across long-running projects and multiple task chats.
 
 ## Why this exists
 
@@ -286,11 +286,9 @@ MIT License. See `LICENSE`.
 
 
 <!-- windows-app-automation-collection:start -->
-## 合集导航
+## 独立项目与总索引
 
-分类：项目管理方法 / 关联索引，不内置为软件安装项。
+本仓库是独立项目，源码、使用说明和发布下载均在本仓库维护。
 
-多软件分类索引与集中迁移包见 [Windows 多软件自动化合集](https://github.com/EagleRanger/windows-app-automation-skills)。本仓库继续独立维护，原有源码、版本、Release 和安装入口不变；是否内置及收录版本以合集说明为准。
-
-[一次下载完整合集](https://github.com/EagleRanger/windows-app-automation-skills/releases/latest)；单独使用本项目仍按本仓库原安装说明操作。
+[查看全部项目索引](https://github.com/EagleRanger/windows-app-automation-skills) · [下载本项目](https://github.com/EagleRanger/codex-project-reasoning-loop/releases/latest)。索引不代替本项目，也不是安装依赖。
 <!-- windows-app-automation-collection:end -->
