@@ -283,3 +283,14 @@ The repository remains reviewable human-owned work: Codex assistance does not re
 ## License
 
 MIT License. See `LICENSE`.
+
+
+<!-- windows-app-automation-collection:start -->
+## 合集导航
+
+分类：项目管理方法 / 关联索引，不内置为软件安装项。
+
+多软件分类索引与集中迁移包见 [Windows 多软件自动化合集](https://github.com/EagleRanger/windows-app-automation-skills)。本仓库继续独立维护，原有源码、版本、Release 和安装入口不变；是否内置及收录版本以合集说明为准。
+
+[一次下载完整合集](https://github.com/EagleRanger/windows-app-automation-skills/releases/latest)；单独使用本项目仍按本仓库原安装说明操作。
+<!-- windows-app-automation-collection:end -->
