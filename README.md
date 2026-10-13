@@ -2,6 +2,10 @@
 
 这是一个面向 Codex 长周期项目的公开 Skill。它把“跨项目通用推理方法”和“单个项目的可执行事实”分成两层，同时复用 Codex 原生项目、任务、审批和自动化状态，避免建立第二套重复任务系统。
 
+<!-- project-support:start -->
+> 如果本项目对你或你的 AI 开发有帮助，下载使用或借鉴后，欢迎点个 [Star](https://github.com/EagleRanger/codex-project-reasoning-loop) 支持，也让更多有同类需求的人找到它。
+<!-- project-support:end -->
+
 A public Codex Skill for durable, evidence-driven iteration across long-running projects and multiple task chats.
 
 ## Why this exists
