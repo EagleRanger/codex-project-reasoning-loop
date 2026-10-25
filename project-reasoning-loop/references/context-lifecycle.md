@@ -18,6 +18,16 @@ Keep only the semantics required for the next safe decision:
 
 Hot context is a current-truth index, not a narrative history. Retain a tombstone or `superseded_by` pointer for a route whose disappearance could let it silently return.
 
+Recover the actual current trigger and effective objective, including which same-topic requests have already closed or been withdrawn. A summary is navigation, not a new instruction; reconcile its pending items with later original replies before acting. Preserve unknown, failed, not observed and not applicable as distinct states.
+
+### Compact read views
+
+An existing concise project summary or deterministic read-only view may serve the model while complete source files remain authoritative for machine checks and audit. Declare its source pointers, selection scope, omissions and fallback to detail. Do not recursively embed full receipts in the hot bundle or copy another project's live state into it.
+
+Check the new view against current corrections, accepted scope, unfinished work, relevant failure boundaries and a discriminating counterexample. Retiring a record or limiting output rows must not hide a still-applicable warning. Unknown or unread evidence remains explicitly unknown; a path is not proof that its target was read.
+
+Measure source-file size, actual view output/model input and observed recovery or delivery effect separately. A smaller file, fewer fields, a fresh process, or a passing parser is not proof of semantic preservation, lower memory usage or faster completion. Keep source-size warnings visible until their own condition is addressed. A read-view declaration is not an executable instruction or business permission.
+
 ### Warm: retrieve by relevance
 
 Keep decisions, lessons, components, handoff packets, run receipts, and validation evidence outside the default bundle. Retrieve them only when the current objective, object, version, failure type, tag, contradiction, or evidence pointer requires them.
@@ -71,13 +81,13 @@ Invalidate it when:
 - permissions or side-effect boundaries change;
 - the meaning of acceptance or the next pass/fail checkpoint changes.
 
-Use the full eight-question gate after a broad semantic change. When only one narrow relationship changed, a focused next-checkpoint confirmation may be sufficient if the unaffected relationships and the reason for limited scope are explicit.
+Use the full eight-question gate when any of the first seven recovery relationships changes. If only the next checkpoint advances normally while those relationships and acceptance meaning remain unchanged, a focused eighth-question confirmation is sufficient; record that scope and its reason. Do not use this exception to conceal a changed authority, workflow, baseline, permission or blocked route.
 
 ## Run the eight-question recovery gate
 
 Give the evaluator only the proposed hot context and require correct answers to:
 
-1. What is the single current objective?
+1. What is the current trigger and effective objective, and which same-topic requests are already closed or withdrawn?
 2. Which files, versions, or systems are authoritative?
 3. What workflow, recipe, or composition is active?
 4. Which baseline has been accepted?
@@ -86,7 +96,7 @@ Give the evaluator only the proposed hot context and require correct answers to:
 7. What risks and permission boundaries remain?
 8. What is the next checkpoint and its pass/fail signal?
 
-Any missing or contradictory answer makes the compaction `candidate_failed`. Restore the prior hot state, repair the semantics, and test again. Hashes and parser success prove structure, not orientation.
+Any missing or contradictory answer makes the compaction `candidate_failed`. Preserve or reopen the auditable source and repair the candidate against current authority before testing again. Reuse the prior hot state only where its objective, workflow and permission semantics remain valid; never roll current authority back to a superseded workflow merely to restore an old snapshot. Until recovery passes, retain the source task and do not use the failed candidate to justify archive or deletion. Hashes and parser success prove structure, not orientation.
 
 ## Archive and deletion states
 

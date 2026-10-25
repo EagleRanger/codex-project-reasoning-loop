@@ -6,6 +6,14 @@ Use this policy to reduce repeated quality-review token consumption without redu
 
 Validate locally first, then spend model attention only on the unresolved semantic or risk-bearing delta. Optimize total verification cost, not token count in isolation.
 
+## Calibrate the acceptance basis
+
+Use this check when the conclusion depends on a classifier, generated summary or proxy metric. Before counting passing tests, inspect the original evidence and one relevant counterexample that would distinguish the desired result from a plausible wrong answer. Confirm that the test's expected outcome matches the user's actual acceptance contract. Directly observable, low-risk edits do not require an additional model reviewer.
+
+For example, an announcement that an event will happen is not evidence that it happened; an average image brightness can be nonzero while the meaningful content region is absent. These are synthetic illustrations, not claims about a particular project. Check the actual object, time, scope and visible result, rather than a convenient aggregate.
+
+Keep implementation validity, observed effect and user acceptance independent. A large passing suite can reproduce the same wrong premise as the implementation. Preserve necessary raw evidence and distinguish contradictory cases before trusting generated labels. Do not replay a successful real action merely to produce a fresh test artifact.
+
 ## Evidence ladder
 
 ### Tier 0: no-quality-review skip
@@ -95,4 +103,10 @@ Track locally observable proxies:
 - defects caught locally versus by model review versus real acceptance.
 
 Use these metrics to tune gates and triggers. Do not call the optimization successful merely because fewer reviews ran; compare escaped defects and unresolved risk too.
+
+For a proposed delivery optimization, compare comparable tasks under the same acceptance contract: end-to-end elapsed time, preparation and reading, tool waiting, coordination and review, rework, and final quality. Include worker startup and handoff overhead when evaluating parallelism. State differences in input, environment and actual provider/model; do not assume a configuration changed an already-running agent.
+
+Distinguish cached input, uncached input and output when usage is observable. Cumulative input is neither current context size nor a bill. No reliable baseline means an observation or hypothesis, not a savings claim. Reuse existing natural-task receipts instead of adding calls or business runs just to populate metrics.
+
+A limit on repeated model review stops redundant review, not unfinished authorized diagnosis, bounded repair or required acceptance. Preserve the task's real deadline, budget and safety constraints; hand back only for new authority, a material user choice, a genuine external dependency or verified inability to continue.
 

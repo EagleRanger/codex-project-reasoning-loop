@@ -1,5 +1,23 @@
 # Codex 长期项目管理与推理循环
 
+**Codex Project Reasoning Loop · v1.4.0**
+
+总 Loop 管可复用方法，分项目 Loop 管本项目长期事实；每个具体项目再按需要划分“项目＋执行”两层。项目经验经过验证、去标识化和审查后返回总方法，形成双向改进循环；原生任务继续负责对话、实时状态与权限。
+
+## v1.4.0 本版重点
+
+1. **经验能被找到并采用：** 按实际对象与操作召回当前有效方法，而不是凭目录、标题或通用报错词选路线；找到方法不等于获得执行权限。
+2. **验收不与实现一起错：** 分类、摘要和代理指标先对照原始证据与区分性反例，分别判断实现、直接效果与用户验收。
+3. **长上下文按需读取：** 精简主入口、分支参考与当前项目读取视图协同，保留最新纠正、已验成果、未完事项和必要反例；不靠删除原始历史提速。
+4. **旧事不重派，主线不断档：** 交接和恢复核对最新结案、撤回和替代；追问、纠正或局部暂停按实际影响处理。
+5. **优化看完整交付：** 同等验收下比较耗时、等待、协调、返工与质量，不把少 token 或少调用直接当作效果。
+
+使用时将内层 `project-reasoning-loop` 目录安装到自己的 Codex Skills 目录，再在新任务中请求使用 `$project-reasoning-loop`。已有项目优先复用原记录；没有方法索引时可用现有 Skill 和项目文档检索，不依赖作者本机注册表或私人服务。
+
+本版保持 Skill 名称、记录格式与验证器兼容。它提供工作流指令和辅助校验，不是后台强制拦截器；不承诺模型永不误判，也没有已证实的通用提速百分比。详细变更见 [更新记录](RELEASE_NOTES.md)。
+
+## 项目介绍 / Overview
+
 这是一个面向 Codex 长周期项目的公开 Skill。它把“跨项目通用推理方法”和“单个项目的可执行事实”分成两层，同时复用 Codex 原生项目、任务、审批和自动化状态，避免建立第二套重复任务系统。
 
 <!-- project-support:start -->
@@ -89,7 +107,7 @@ For very long-running projects with huge histories, resume from compact hot trut
 14. **Converge with a baseline pass and an exception pass.** Freeze items that pass, repair only the observed failure subset once, and reopen the baseline only when failures are systemic.
 15. **Keep context hot, warm, and cold.** Resume from a minimal current-truth bundle, retrieve decisions and evidence by relevance, and preserve raw history for audit without loading it by default.
 16. **Prove recovery before archive or deletion.** Compact recall-first and precision-second, preserve the prior state and hash, then pass an eight-question hot-only recovery gate. Structural success is not semantic recovery.
-17. **Invalidate stale recovery receipts.** Material changes to objective, authority, workflow, permissions, dependencies, or acceptance semantics require focused or full semantic recovery retesting before old receipts can be trusted.
+17. **Invalidate stale recovery receipts.** Material changes to objective, authority, workflow, permissions, dependencies, or acceptance semantics require semantic recovery retesting under the [context-lifecycle policy](project-reasoning-loop/references/context-lifecycle.md#invalidate-stale-recovery-receipts) before old receipts can be trusted.
 18. **Separate claim dimensions.** Structural validity, directly observed real effect, and user acceptance are independent claims with independent evidence.
 19. **Resolve mutable authority at validation time.** A pointer to a current owner must resolve against that owner's current declaration; historical identifiers may be used only as explicitly frozen fixtures.
 20. **Admit feedback before promotion.** Execution returns first enter project-local review. Only admitted, de-identified candidates may enter cross-project review.

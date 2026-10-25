@@ -94,3 +94,4 @@ Execution output may nominate a follow-up, but only the project lane may admit i
 - Delay non-urgent summaries when immediate delivery would interrupt a monitored external action.
 - On receipt, classify the message as a question, correction, addition, local pause, or whole-task replacement. Do not treat every new message as cancellation.
 - Before handing off an old task, point to the original relevant span through the latest correction; do not rely on the task title or a stale summary.
+- Apply [handoff settlement](continuity-and-learning.md#deliver-messages-at-the-right-time) before dispatch and on receipt: reconcile latest closure, withdrawal, replacement and unknown delivery before repeating an action. An old forwarded request is not fresh human authority.
